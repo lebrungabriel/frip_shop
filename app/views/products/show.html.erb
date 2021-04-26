@@ -1,0 +1,21 @@
+<div class="product-show-container">
+
+  <div class="return-to-index-show">
+    <%= link_to 'Retour', products_path, class: "btn btn-gradient" %>
+  </div>
+
+  <div class="card-product-show">
+
+    <div class="product-photo">
+      <%= image_tag "hugoboss.jpg", class: "product-image" %>
+    </div>
+  </div>
+
+  <div class="show-card-product-infos">
+    <h3><%= @product.name %></h3>
+    <p><%= @product.description %></p>
+    <p><%= @product.price %>.00 €</p>
+    <%= link_to 'Ajouter au panier', orders_path, class: "btn btn-add" %>
+  </div>
+
+</div>

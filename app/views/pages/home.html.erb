@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="search-bar">
+  <%= form_tag products_path, method: :get do %>
+    <%= text_field_tag :query, params[:query], placeholder: 'Rechercher' %>
+    <span></span>
+    <%= select_tag :category, options_for_select(Product::CATEGORIES), prompt: "Categories", class: "dropd" %>
+    <span></span>
+    <%= button_tag type: :submit, class: "search-icon" do %><i class="fas fa-search"></i><% end %>
+  <% end %>
+</div>
+
+
+<div class="indexes">
+    <%= link_to 'Femmes', products_path(gender: 'femme'), class: "btn btn-gradient" %>
+    <%= link_to 'Hommes', products_path(gender: 'homme'), class: "btn btn-gradient" %>
+</div>
+
+

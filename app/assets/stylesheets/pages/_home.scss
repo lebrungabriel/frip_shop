@@ -1,1 +1,93 @@
-// Specific CSS for your home-page
+#pages-home .custom-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 125px);
+  justify-content: center;
+  align-items: center;
+  // min-height: unset;
+}
+
+body#pages-home{
+  background-image: image-url("wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.search-bar {
+  display: flex;
+  background-color: white;
+  width: 50%;
+  border-radius: 24px;
+  overflow: hidden;
+  align-items: center;
+  border: 1px solid white;
+  margin-bottom: 5%;
+
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    input {
+      background: transparent;
+      height: 40px;
+      padding: 0 16px;
+      align-items: center;
+      border: none;
+      flex-grow: 1;
+      border-radius: 24px;
+
+      &:focus,
+      &:hover {
+        outline: 0;
+        background: #f3f3f3;
+      }
+    }
+  }
+}
+
+
+.dropd {
+  opacity: 0.75;
+  background: transparent;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  border: none;
+  flex-grow: 1;
+  border-radius: 24px;
+  &:focus,
+  &:hover {
+    outline: 0;
+    background: #f3f3f3;
+  }
+}
+
+.search-icon {
+  background: transparent;
+  // height: 48px;
+  padding: 0 16px;
+  // align-items: center;
+  // justify-content: end;
+  border: none;
+  font-family: "Circular Medium";
+}
+
+.fa-search {
+  color: #807f7f;
+
+  &:hover {
+    color: #404040;
+  }
+}
+
+.search-bar span {
+  width: 1px;
+  height: 24px;
+  background: rgba( 0, 0, 0, 0.18);
+  // margin-left: 10px;
+  margin: 0px 10px 0 10px;
+}
+
+

@@ -1,0 +1,39 @@
+.log-button {
+  background: $blue-gradient;
+  color: white;
+
+  &:hover {
+    background: $blue-gradient-hover;
+    color: white;
+  }
+}
+
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  // font-weight: bold;
+  background: linear-gradient(#417e98, #62a4bd);
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#51a0c1, #72a9bd);
+  color: white;
+}
+
+.btn-add {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  // font-weight: bold;
+  background: $green-gradient;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.btn-add:hover {
+  background: $green-gradient-hover;
+  color: white;
+}
