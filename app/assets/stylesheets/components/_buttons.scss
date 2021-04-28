@@ -8,22 +8,21 @@
   }
 }
 
-.btn-gradient {
+.btn-blue {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  // font-weight: bold;
-  background: linear-gradient(#417e98, #62a4bd);
+  background: $blue-gradient;
   transition: background 0.3s ease;
   border: none;
 }
 
-.btn-gradient:hover {
-  background: linear-gradient(#51a0c1, #72a9bd);
+.btn-blue:hover {
+  background: $blue-gradient-hover;
   color: white;
 }
 
-.btn-add {
+.btn-green {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
@@ -33,7 +32,9 @@
   border: none;
 }
 
-.btn-add:hover {
+.btn-green:hover {
   background: $green-gradient-hover;
   color: white;
 }
+
+

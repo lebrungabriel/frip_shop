@@ -1,0 +1,28 @@
+<div class="main-item-container">
+
+  <div class="order-item-container">
+
+
+    <% @order_items.each do |item| %>
+        <div class="order-item-card">
+          <!-- <div class="product-photo"> -->
+            <%= image_tag "hugoboss.jpg", class: "product-image" %>
+          <!-- </div> -->
+          <div class="order-item-infos">
+            <h3><%= item.product.name %></h3>
+            <p><%= item.product.price %>.00 €</p>
+            <%= link_to "Remove", order_item_path(item), method: :delete, class: "btn btn-blue" %>
+          </div>
+        </div>
+      <% end %>
+
+  </div>
+
+  <div class="payment-card">
+    <h4>Titulaire de la carte :</h4>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Voluptatibus, enim quia eos! Placeat fuga accusamus, reiciendis vero explicabo, beatae. Facere sed nobis deleniti excepturi eum nisi officia nesciunt quae nemo.</p>
+    <h6>Date d'expiration :</h6>
+    <br>
+    <%= link_to "Paiement", root_path, class: "btn btn-green" %>
+  </div>
+</div>

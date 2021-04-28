@@ -1,7 +1,7 @@
 <div class="product-show-container">
 
   <div class="return-to-index-show">
-    <%= link_to 'Retour', products_path, class: "btn btn-gradient" %>
+    <%= link_to 'Retour', products_path, class: "btn btn-blue" %>
   </div>
 
   <div class="card-product-show">
@@ -15,7 +15,9 @@
     <h3><%= @product.name %></h3>
     <p><%= @product.description %></p>
     <p><%= @product.price %>.00 €</p>
-    <%= link_to 'Ajouter au panier', orders_path, class: "btn btn-add" %>
+
+
+    <%= link_to "Ajouter au panier", product_order_items_path(@product), method: :post, class: "btn btn-blue" %>
   </div>
 
 </div>

@@ -23,7 +23,7 @@
 .info {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 15%;
   align-items: center;
 
   a {
@@ -38,4 +38,32 @@
 
 .dropdown-item {
   color: white;
+}
+
+.fa-shopping-bag {
+  font-size: 23px;
+  position: relative;
+}
+
+.fa-heart {
+  font-size: 23px;
+}
+
+.counter-cart {
+  width: 17px;
+  height: 17px;
+  background: #3e9cb9;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  align-items: center;
+  position: absolute;
+  right: 100px;
+  top: 39px;
+}
+
+.number {
+  color: white;
+  font-size: 13px;
 }
