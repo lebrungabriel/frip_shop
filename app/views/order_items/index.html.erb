@@ -1,8 +1,6 @@
 <div class="main-item-container">
 
   <div class="order-item-container">
-
-
     <% @order_items.each do |item| %>
         <div class="order-item-card">
           <!-- <div class="product-photo"> -->
@@ -11,11 +9,10 @@
           <div class="order-item-infos">
             <h3><%= item.product.name %></h3>
             <p><%= item.product.price %>.00 €</p>
-            <%= link_to "Remove", order_item_path(item), method: :delete, class: "btn btn-blue" %>
+            <%= link_to "Supprimer", order_item_path(item), method: :delete, class: "btn btn-blue" %>
           </div>
         </div>
       <% end %>
-
   </div>
 
   <div class="payment-card">

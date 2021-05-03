@@ -19,7 +19,7 @@ puts 'Creating users...'
 clement = User.new(nickname: "Clem", password: "azerty", email: "clement@lewagon.org")
 clement.save!
 
-gabriel = User.new(nickname: "Gab", password: "azerty", email: "gabriel@gmail.com")
+gabriel = User.new(nickname: "Gab", password: "azerty", email: "gabriel@lewagon.org")
 gabriel.save!
 
 francois = User.new(nickname: "Francis", password: "azerty", email: "francois@lewagon.org")
@@ -29,22 +29,63 @@ puts 'Finished !'
 users = [clement, gabriel, francois]
 
 puts 'Creating products...'
-boss_shirt = Product.create!(user: users.sample, name: "T-shirt Hugo Boss", price: 10, category: "T-shirts", gender: "homme", description: "T-shirt bleu marine")
+boss_shirt = Product.create!(user: users.sample,
+                             name: "T-shirt Hugo Boss",
+                             price: 10,
+                             category: "T-shirts",
+                             gender: "homme",
+                             color: "Gris",
+                             description: "T-shirt manches longues",
+                             size: "L")
 boss_shirt.save!
 
-levis_jean = Product.create!(user: users.sample, name: "Jean Levis", price: 15, category: "Jeans", gender: "homme", description: "Jean coupe slim")
+levis_jean = Product.create!(user: users.sample,
+                             name: "Jean Levis",
+                             price: 15,
+                             category: "Jeans",
+                             gender: "homme",
+                             color: "Rouge",
+                             description: "Jean coupe slim",
+                             size: "M")
 levis_jean.save!
 
-nike_jacket = Product.create!(user: users.sample, name: "Veste Nike", price: 10, category: "Vestes", gender: "femme", description: "Veste jaune avec poches intérieures")
+nike_jacket = Product.create!(user: users.sample,
+                             name: "Veste Nike",
+                             price: 10,
+                             category: "Vestes",
+                             gender: "femme",
+                             color: "Bleu",
+                             description: "Veste en tissu avec poches intérieures",
+                             size: "XS")
 nike_jacket.save!
-puts 'Finished !'
 
-coat_napapijri = Product.create!(user: users.sample, name: "Manteau Napapijri", price: 10, category: "Manteaus", gender: "homme", description: "Manteau coupe vent à capuche")
+coat_napapijri = Product.create!(user: users.sample,
+                             name: "Manteau Napapijri",
+                             price: 10,
+                             category: "Manteaus",
+                             gender: "homme",
+                             color: "Vert",
+                             description: "Manteau coupe vent à capuche",
+                             size: "XL")
 coat_napapijri.save!
 
-carhartt_pant = Product.create!(user: users.sample, name: "Pantalon Carhartt", price: 5, category: "Jeans", gender: "homme", description: "Pantalon en velour beige")
+carhartt_pant = Product.create!(user: users.sample,
+                             name: "Pantalon Carhartt",
+                             price: 5,
+                             category: "Jeans",
+                             gender: "homme",
+                             color: "Noir",
+                             description: "Pantalon en velour",
+                             size: "L")
 carhartt_pant.save!
 
-balenciaga_skirt = Product.create!(user: users.sample, name: "Jupe Balenciaga", price: 20, category: "Jupes", gender: "femme", description: "Jupe Balenciaga en coton")
+balenciaga_skirt = Product.create!(user: users.sample,
+                             name: "Jupe Balenciaga",
+                             price: 20,
+                             category: "Jupes",
+                             gender: "femme",
+                             color: "Jaune",
+                             description: "Jupe Balenciaga en coton",
+                             size: "S")
 balenciaga_skirt.save!
 puts 'Finished !'

@@ -18,16 +18,15 @@
           <i class="fas fa-shopping-bag"></i>
         <% end %>
 
-        <div class="counter-cart">
-          <% counter = 0 %>
-          <% if OrderItem.count > 0 %>
-
-            <div class="number">
-              <% counter += 1 %>
-              <%= OrderItem.count %>
+        <% if user_signed_in? %>
+          <% if current_user.order_items.count > 0 %>
+            <div class="counter-cart">
+              <div id="number">
+                <%= current_user.order_items.count %>
+              </div>
             </div>
           <% end %>
-        </div>
+        <% end %>
 
         <div class="nav-item dropdown">
           <%= image_tag "user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -36,6 +35,7 @@
             <% if user_signed_in? %>
               <%= link_to "Profil", "#", class: "dropdown-item" %>
               <%= link_to "Mes commandes", "#", class: "dropdown-item" %>
+              <%= link_to "Ajouter un article", new_product_path, method: :get, class: "dropdown-item" %>
               <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             <% else %>
               <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>

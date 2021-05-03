@@ -1,0 +1,24 @@
+<div class="add-product-container">
+  <div class="add-product-card">
+      <h4>Ajouter un nouvel article</h4>
+      <%= simple_form_for(@product) do |f| %>
+      <%= f.input :name, label: "Nom de l'article :" %>
+      <%= f.input :price, label: "Prix de l'article :" %>
+      <%= f.input :description, label: "Description de l'article :" %>
+      <%= f.input :color, label: "Couleur de l'article :" %>
+
+  <div class="dropdown-add">
+    <%= select_tag :category, options_for_select(Product::CATEGORIES), prompt: "Categories", class: "dropd" %>
+    <%= select_tag :gender, options_for_select(Product::GENDER), prompt: "Genre", class: "dropd" %>
+    <%= select_tag :size, options_for_select(Product::SIZES), prompt: "Taille", class: "dropd" %>
+    <br>
+    <br>
+  </div>
+
+  <div class="btn-add">
+    <%= f.submit "Ajouter", class: "btn btn-blue" %>
+  </div>
+
+    <% end %>
+  </div>
+</div>

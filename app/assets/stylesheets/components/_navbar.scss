@@ -36,8 +36,12 @@
   }
 }
 
-.dropdown-item {
-  color: white;
+.nav-item a {
+  color: #282D33;
+
+  &:hover {
+    color: #282D33;
+  }
 }
 
 .fa-shopping-bag {
@@ -63,7 +67,7 @@
   top: 39px;
 }
 
-.number {
+#number {
   color: white;
   font-size: 13px;
 }

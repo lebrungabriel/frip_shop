@@ -1,6 +1,20 @@
+<div class="filter-container">
+  <div class="filters">
+    <%= form_tag products_path, method: :get do %>
+      <%= select_tag :category, options_for_select(Product::CATEGORIES), prompt: "Categories", class: "dropd-filter" %>
+      <span></span>
+      <%= select_tag :price, options_for_select(Product::PRICES), prompt: "Prix", class: "dropd-filter" %>
+      <span></span>
+      <%= select_tag :color, options_for_select(Product::COLORS), prompt: "Couleurs", class: "dropd-filter" %>
+      <span></span>
+      <%= select_tag :size, options_for_select(Product::SIZES), prompt: "Tailles", class: "dropd-filter" %>
+      <span></span>
+      <%= button_tag type: :submit, class: "search-icon" do %><i class="fas fa-search"></i><% end %>
+    <% end %>
+  </div>
+</div>
+
 <div class="cards-container">
-
-
   <% @products.each do |product| %>
     <%= link_to product_path(product) do  %>
 
@@ -10,14 +24,18 @@
           <%= image_tag "hugoboss.jpg", class: "product-image" %>
         </div>
 
+        <div class="like-product">
+          <%= link_to product_liked_items_path(product), method: :post, class: "heart" do %>
+            <i class="fas fa-heart"></i>
+          <% end %>
+        </div>
+
         <div class="card-product-infos">
           <h3><%= product.name %></h3>
           <p><%= product.price %>.00 €</p>
         </div>
 
       </div>
-
     <% end %>
   <% end %>
-
 </div>
